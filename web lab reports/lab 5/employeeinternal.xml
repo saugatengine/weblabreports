@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE employee [
+    <!ELEMENT employee (firstname, lastname, designation, salary)>
+    <!ELEMENT firstname (#PCDATA)>
+    <!ELEMENT lastname (#PCDATA)>
+    <!ELEMENT designation (#PCDATA)>
+    <!ELEMENT salary (#PCDATA)>
+]>
+<employee>
+    <firstname>Saugat</firstname>
+    <lastname>Bhattarai</lastname>
+    <designation>Developer</designation>
+    <salary>60000</salary>
+</employee>

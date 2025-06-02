@@ -1,0 +1,6 @@
+
+
+$host = "localhost";
+$user = "student_1";
+$password = "student55"; // your DB password
+$dbname = "gadget hub"; 

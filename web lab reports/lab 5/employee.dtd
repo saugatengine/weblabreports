@@ -1,0 +1,5 @@
+<!ELEMENT employee (firstname, lastname, designation, salary)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>

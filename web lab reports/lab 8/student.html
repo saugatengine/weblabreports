@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student CRUD</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Container for the two forms side by side */
+        .forms-flex-container {
+            display: flex;
+            gap: 30px;
+            max-width: 900px;
+            margin: 20px auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            flex: 1 1 400px; /* flexible width, min 400px */
+            box-sizing: border-box;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Delete form container */
+        .delete-container {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        iframe {
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+            max-width: 900px;
+            width: 100%;
+            height: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Form</h2>
+
+    <div class="forms-flex-container">
+        <form method="POST" action="insert.php">
+            <h3>Insert Student</h3>
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <button type="submit">Insert</button>
+        </form>
+
+        <form method="POST" action="update.php">
+            <h3>Update Student</h3>
+            <input type="email" name="email" placeholder="Email to Update" required>
+            <input type="text" name="name" placeholder="New Name" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+
+    <div class="delete-container">
+        <h3>Delete Student</h3>
+        <form method="POST" action="delete.php">
+            <input type="email" name="email" placeholder="Email to Delete" required>
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+
+    <h3>All Students</h3>
+    <iframe src="fetch.php"></iframe>
+</body>
+</html>

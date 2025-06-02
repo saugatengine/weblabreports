@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+    <script>
+        function validateForm() {
+            const username = document.forms["userForm"]["username"].value;
+            const email = document.forms["userForm"]["email"].value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (username.trim() === "") {
+                alert("Username is required.");
+                return false;
+            }
+            if (!emailPattern.test(email)) {
+                alert("Enter a valid email address.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>User Registration Form</h2>
+    <form name="userForm" method="POST" action="lab9.php" onsubmit="return validateForm();">
+        <label>Username:</label><br>
+        <input type="text" name="username"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="text" name="email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

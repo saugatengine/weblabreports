@@ -1,0 +1,10 @@
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="employee.xsd">
+  <name>
+    <firstname>Ram</firstname>
+    <middlename>Kumar</middlename>
+    <lastname>Thapa</lastname>
+  </name>
+  <designation>Manager</designation>
+  <salary>45000</salary>
+</employee>
